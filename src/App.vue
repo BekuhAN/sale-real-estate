@@ -22,6 +22,7 @@ export default {
 
 * {
   color: inherit;
+  line-height: 1.5;
   &:hover {
     color: inherit;
   }
