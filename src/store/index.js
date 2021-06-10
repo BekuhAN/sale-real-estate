@@ -8,6 +8,8 @@ export default new Vuex.Store({
   state: {
     listMenu: [],
     listCatalog: [],
+    listRealtors: [],
+    listCategories: [],
   },
   getters: {
     listMenu(state) {
@@ -16,6 +18,12 @@ export default new Vuex.Store({
     listCatalog(state) {
       return state.listCatalog;
     },
+    listRealtors(state) {
+      return state.listRealtors;
+    },
+    listCategories(state) {
+      return state.listCategories;
+    },
   },
   mutations: {
     updateListMenu(state, payload) {
@@ -23,6 +31,12 @@ export default new Vuex.Store({
     },
     updateListCatalog(state, payload) {
       state.listCatalog = payload;
+    },
+    updateListRealtors(state, payload) {
+      state.listRealtors = payload;
+    },
+    updateListCategories(state, payload) {
+      state.listCategories = payload;
     },
   },
   actions: {
@@ -33,8 +47,18 @@ export default new Vuex.Store({
     },
     getListCatalog({ commit }, params) {
       axios
-        .get("http://localhost:3000/catalog", { params })
+        .get("http://localhost:3000/catalog?_expand=realtor", { params })
         .then((resp) => commit("updateListCatalog", resp.data));
+    },
+    getListRealtors({ commit }) {
+      axios
+        .get("http://localhost:3000/realtors")
+        .then((resp) => commit("updateListRealtors", resp.data));
+    },
+    getListCategories({ commit }) {
+      axios
+        .get("http://localhost:3000/categories?_embed=catalog")
+        .then((resp) => commit("updateListCategories", resp.data));
     },
   },
 });
