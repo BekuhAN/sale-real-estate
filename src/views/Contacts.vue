@@ -31,7 +31,7 @@
               />
               <input
                 name="user_theme"
-                type="email"
+                type="text"
                 class="contact__form__item"
                 placeholder="Тема"
               />
@@ -85,7 +85,7 @@
 
 <script>
 import { TheMask } from "vue-the-mask";
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 export default {
   data() {
     return {
@@ -94,28 +94,27 @@ export default {
     };
   },
   methods: {
-    // sendEmail(e) {
-    //   const self = this;
-    //   emailjs
-    //     .sendForm(
-    //       "service_q45rr4l",
-    //       "template_pekw17p",
-    //       e.target,
-    //       "user_pIL4lQ3MMryXAHq5HwLIL"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         self.isSuccess = true;
-    //         e.target.reset();
-    //         console.log("SUCCESS!", result.status, result.text);
-    //       },
-    //       (error) => {
-    //         self.isError = true;
-    //         e.target.reset();
-    //         console.log("FAILED...", error);
-    //       }
-    //     );
-    // },
+    sendEmail(e) {
+      emailjs
+        .sendForm(
+          "service_q45rr4l",
+          "template_pekw17p",
+          e.target,
+          "user_pIL4lQ3MMryXAHq5HwLIL"
+        )
+        .then(
+          (result) => {
+            e.target.reset();
+            alert("Отправлено!");
+            console.log("SUCCESS!", result.status, result.text);
+          },
+          (error) => {
+            e.target.reset();
+            alert("Что-то пошло не так!");
+            console.log("FAILED...", error);
+          }
+        );
+    },
   },
   components: {
     TheMask,

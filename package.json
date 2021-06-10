@@ -16,7 +16,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "emailjs-com": "^3.0.2",
+    "emailjs-com": "^2.6.4",
     "hooper": "^0.3.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -34,7 +34,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

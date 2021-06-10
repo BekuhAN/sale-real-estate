@@ -18,7 +18,7 @@
                     }}
                   </div>
                   <div class="price">
-                    {{ item.price
+                    {{ item.price | filterPrice 
                     }}<font-awesome-icon class="icon" icon="ruble-sign" />
                   </div>
                 </div>
@@ -161,11 +161,11 @@ import {
   Navigation as HooperNavigation,
   Pagination as HooperPagination,
 } from "hooper";
+import "hooper/dist/hooper.css";
 import { mapActions, mapGetters } from "vuex";
 import CatalogItem from "../components/catalogItem.vue";
 import RealtorItem from "../components/realtorItem.vue";
 import axios from "axios";
-import "hooper/dist/hooper.css";
 
 export default {
   data() {

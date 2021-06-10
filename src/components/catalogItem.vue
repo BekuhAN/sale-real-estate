@@ -10,7 +10,8 @@
       <div class="name">{{ item.name }}</div>
       <div class="adres">{{ item.adres }}</div>
       <div class="price">
-        {{ item.price }}<font-awesome-icon class="icon" icon="ruble-sign" />
+        {{ item.price | filterPrice
+        }}<font-awesome-icon class="icon" icon="ruble-sign" />
       </div>
       <div class="space">
         <strong>Площадь: </strong>{{ item.totalSpace }} м<sup>2</sup>
