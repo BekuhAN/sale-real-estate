@@ -4,10 +4,6 @@
       <div class="row">
         <div class="col-4 footer__contacts">
           <div class="logo"><img src="../assets/logo-white.png" /></div>
-          <div class="description">
-            Мы подъехали к дороге, и когда мы это сделали, мы услышали стук
-            копыт и увидели сквозь стволы деревьев трех кавалерийских солдат
-          </div>
           <div class="footer__contacts__item">
             <font-awesome-icon class="icon" icon="map-marker-alt" /> г.
             Краснодар, улица Володи Головатого, 288
@@ -80,8 +76,8 @@ footer {
   background: #333;
   color: #fff;
   .footer__contacts {
-    .description {
-      margin: 20px 0;
+    .logo {
+      margin-bottom: 20px;
     }
     &__item {
       position: relative;

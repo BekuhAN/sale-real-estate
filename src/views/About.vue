@@ -1,7 +1,7 @@
 <template>
   <main class="about_page">
     <section class="page_title"><h1>О нас</h1></section>
-    <section class="detail">
+    <!-- <section class="detail">
       <div class="container">
         <div class="row">
           <div class="col-6 detail__item">
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="team">
       <div class="container">
         <div class="section_title">Наша команда</div>

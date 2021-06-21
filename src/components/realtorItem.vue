@@ -5,7 +5,6 @@
     </figure>
     <div class="detail">
       <div class="name">{{ item.name }}</div>
-      <div class="description">{{ item.description }}</div>
       <div class="company"><strong>Компания:</strong> МойДом</div>
       <div class="email">
         <font-awesome-icon class="icon" icon="envelope" />{{ item.email }}
